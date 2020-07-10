@@ -1,0 +1,1 @@
+hi first problem one freshrpms rpms upgrade mplayer get mplayer mplayer error loading shared libraries libdvdnav cannot open shared object file file directory guess matthias forgotten libdvdnav dependency told needed better chose linux _______________________________________________ rpm list mailing list rpm list freshrpms net 

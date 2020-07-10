@@ -1,0 +1,1 @@
+justin mason jm jmason org writes hmm also think ve_found cases hitting fetchmail received hdrs bad could fixed fetchmail adds received headers seems wrong open bug investigate attach examples yeah somehow pity bugzilla allow email submissions agreed least add information email dan 

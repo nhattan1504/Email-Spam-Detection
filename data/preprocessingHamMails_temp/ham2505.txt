@@ -1,0 +1,1 @@
+hey since upgraded mplayer vo sdl isnt working gives black screen hear sound anyone help btw also source rpm specified without libdv work worked lirc arts thanks roi _______________________________________________ rpm list mailing list rpm list freshrpms net 

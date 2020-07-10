@@ -1,0 +1,1 @@
+hi matthias think could help new plugins package gkrellm would prefer keep package every plugin separately latter would probably easier maintain ille skyttä ville skytta iki fi _______________________________________________ rpm list mailing list rpm list freshrpms net 

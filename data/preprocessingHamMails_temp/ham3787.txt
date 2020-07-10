@@ -1,0 +1,1 @@
+paul suspect best answer make dbm implementation paul configurable via bayescustomize ini default paul anydbm think might want specify database open function instead module three ways open db files bsddb btopen hashopen rnopen require little trickery options py insane amount skip _______________________________________________ spambayes mailing list spambayes python org 

@@ -1,0 +1,1 @@
+hi applying default apt conf shipped freshrpms net apt package found bit weird behaviour changed old new versions apt get upgrade tell packages upgraded upgrade something apt conf apt conf get download false show upgraded true ille skyttä ville skytta iki fi _______________________________________________ rpm list mailing list rpm list freshrpms net 

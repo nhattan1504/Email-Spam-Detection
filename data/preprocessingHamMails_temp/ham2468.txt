@@ -1,0 +1,1 @@
+install add additional service port system access via microsoft odbc driver regards yen ho technical support _______________________________________________ rpm list mailing list rpm list freshrpms net 

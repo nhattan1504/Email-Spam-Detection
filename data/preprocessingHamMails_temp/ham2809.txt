@@ -1,0 +1,1 @@
+bugzilla daemon hughes family org wrote ok fixed cheers fix creating pidfile user add documentation since prevents use standard var run directory writable root thomas thomas anders anders hmi de hahn meitner institut berlin germany 

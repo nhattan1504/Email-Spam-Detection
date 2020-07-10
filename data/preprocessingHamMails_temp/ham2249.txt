@@ -1,0 +1,1 @@
+apt conf lines snip rpm leave list empty disable allowedduppkgs kernel kernel smp kernel enterprise holdpkgs kernel source kernel headers snip tell apt hold kernel packages use syntax like kernel quite understand part kernel means peter _______________________________________________ rpm list mailing list rpm list freshrpms net 

@@ -1,0 +1,1 @@
+halloechen requires saxon conflicts saxon spec file apparently rpm ignores version numbers requires saxon conflicts saxon would install even saxon requires saxon conflicts saxon install even saxon could reason tschoe torsten _______________________________________________ rpm list mailing list rpm list freshrpms net 

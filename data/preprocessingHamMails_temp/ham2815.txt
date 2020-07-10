@@ -1,0 +1,1 @@
+etc cron daily tripwire check error tripwire database jalapeno found run etc tripwire twinstall sh tripwire init 

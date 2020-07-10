@@ -1,3 +1,4 @@
+# Get stopwords Vi & Eng
 import glob
 from nltk.corpus import stopwords
 
@@ -10,7 +11,9 @@ def getStopwordsVN(arrayOfFileName):
             stopwords_VN.append(f.readline().split('\n')[0])
         f.close()
     return stopwords_VN
+
 def getStopwordsVN_ENG():
+    # Return a array which has list of words
     stopwordsVN_fileNames = glob.glob("data/stopwordsVN/*.txt")
     stopwordsVN = getStopwordsVN(stopwordsVN_fileNames)
     stopwordsENG = stopwords.words('english')

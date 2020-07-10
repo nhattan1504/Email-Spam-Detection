@@ -1,0 +1,1 @@
+wed feb harri haataja wrote install met openssh like worst case ve_had different openssl libraries wtf bump major version incompatible openssl thing something ive made dummy packages verbose warning attached explicitly provide capabilities claim make packages peter _______________________________________________ rpm list mailing list rpm list freshrpms net 

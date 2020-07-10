@@ -1,0 +1,1 @@
+fine withoss yes _without_oss fine withoss fine withisapnp auto _without_isapnp fine withisapnp fine kernsrc _without_kernsrc fine kernsrc kernsrc else buildrequires makedev endif configure configure oss withoss isapnp withisapnp thu aug daniel pavel danielpavel myrealbox com added oss isa pnp build time flags added kernel source requirement flag 

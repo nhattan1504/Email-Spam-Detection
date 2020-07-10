@@ -1,0 +1,1 @@
+john looney wrote ok guess sysctl conf best way setting proc sys fs file max nice big number make change etc sysctl conf take effect without reboot test really john look manual page sysctl command cheers waider waider waider ie yes personal irish linux users group ilug linux ie list maintainer listmaster linux ie 

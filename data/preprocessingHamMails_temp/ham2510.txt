@@ -1,0 +1,1 @@
+fri oct mark derricutt wrote anyone know one could get rpms alot python libraries darn annoying way rh ship python python libs work one esp pgdb xml modules anyone know red hat insist sticking python want preserve binary compatibility releases red hat python default panu _______________________________________________ rpm list mailing list rpm list freshrpms net 

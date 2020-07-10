@@ -1,0 +1,1 @@
+liam bedford wrote fdisk mbr restore dos mbr leave partitions alone clear partition table entries mbr end valid boot signature regards ger irish linux users group ilug linux ie list maintainer listmaster linux ie 

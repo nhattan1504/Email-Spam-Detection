@@ -1,0 +1,1 @@
+lets say nfs server nfsd running really high load nfsstat tell roughly much traffic going access getattr either client server tell way server side determine client causing usage client side way determine process mel gorman msc student university limerick irish linux users group ilug linux ie list maintainer listmaster linux ie 
