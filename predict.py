@@ -1,7 +1,7 @@
 import writeprocessingfile
 import processmodel
 
-show_acc_sample_data = True
+show_acc_sample_data = False
 updateSampleFiles = False
 
 
