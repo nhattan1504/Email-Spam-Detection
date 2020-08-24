@@ -1,69 +1,52 @@
 # Email Spam Detection
- Email Spam Detection (support Vietnamese) using Bayes.
-
-### `python predict.py`
-type it on terminal to run codes.<br />
-
-<b>`Input:`</b> paste your data (one or some mails) to <b><i>data/test</i></b> folder. <br />
-<em>Format input:</em> file <b><i>'.mbox'</i></b>: not decoded, file <b><i>'.txt'</i></b>: decoded. <br />
-(see <b><i>data/test</i></b> folder for more details.)<br />
-<b>`Output:`</b> print on your console a list of your mails is spam or not.<br />
-<br />
-
-## Reference
-[Email Spam Detection Using Python & Machine Learning](https://medium.com/@randerson112358/email-spam-detection-using-python-machine-learning-abe38c889855)<br />
-[Lý thuyết về mạng Bayes và ứng dụng vào bài toán lọc thư rác](https://viblo.asia/p/ly-thuyet-ve-mang-bayes-va-ung-dung-vao-bai-toan-loc-thu-rac-07LKXzkelV4)<br />
-[Vietnamese Stopwords](https://github.com/stopwords/vietnamese-stopwords)<br />
-
+ Predict your emails are spam or not using Bayes algorithm (supporting Vietnamese.)
+ <br />
  
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-
 * [About the Project](#about-the-project)
-  * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
+  * [Requirement](#requirement)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
-
-
+  * [Training data](#training-data)
+  * [Test data](#test-data)
+  * [Statistic](#statistic)
+* [Reference](#reference)
+<br />
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
-  <a>
-    <img src="images/screenshot.png">
-  </a>
-
-This project is used to detect the emails spam or not (supporting Vietnamese.)
+## About The Project <a name="about-the-project"></a>
+  <a><img src="images/screenshot.png"></a>
+- This project is used to predict the emails spam or not (supporting Vietnamese.) <br />
+- `Preprocessing step`: Filter `stopwords` (`vi` and `eng`) to get value keywords and save to files.
+- Because of saving to files after `preprocessing step`, it don't take too much time to preprocess for each training model times.
+<br />
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## Getting Started <a name="getting-started"></a>
 - To get a local copy up and running follow these simple steps.
 
-### Requirement
+### Requirement <a name="requirement"></a>
 - All versions `Python 3.x` are compatible with this project.
 
-### Installation
+### Installation <a name="installation"></a>
 - Clone the repo
 ```sh
 git clone https://github.com/nunuthuan99/Email-Spam-Detection
 ```
+<br />
 
-## Usage
-### Training data
+
+## Usage <a name="usage"></a>
+### Training data <a name="training-data"></a>
 1. Paste your training data (file `.txt` or `.mbox`) in these folders `data/inputRawSpamMails` and `data/inputRawHamMails` respectively your `spam email` and your `ham email`
 2. For runing in the first time, make sure `updateSampleFiles` attribute in file `predict.py` is set to `True`
 ```sh
 updateSampleFiles = True
 ```
-### Test data
+### Test data <a name="test-data"></a>
 1. Paste your test data (file `.txt` or `.mbox`) in the folder `data/test`
 2. Run this code in your command to predict the emails are spam or not.
 ```sh
@@ -75,76 +58,44 @@ python predict.py
 ```sh
 updateSampleFiles = False
 ```
-- The result will look like this:
+- The result will look like this: <br />
   <a>
-    <img src="images/result.png">
+    <img src="images/result.jpg">
   </a>
 
-### Statistic
+### Statistic <a name="statistic"></a>
 - If you want to see details (precision, accuracy,...) about training model, set `show_acc_sample_data` attribute in file `predict.py` to `True`
 ```sh
 show_acc_sample_data = False
 ```
-- And the output looks like this: 
+- And the output looks like this: <br />
   <a>
-    <img src="images/statistic.png">
+    <img src="images/statistic.jpg">
   </a>
-- - As the result, we see the amount of training data are `1155 mails` (include ham/spam mails.)
+
+* Let's explain some infomation about the output:
+  * As the result, we see the amount of training data are `1155 mails` (include ham/spam mails.)
+  * `test_size = 0.25`. It means we split randomly 25% in `1155 mails` to test, the others are for training.
+  * `test_size` can be changed in file `processmodel.py`:
+  ```sh
+    def processingModel(acc_score_of_sample_data=True):
+    df_train = readfileinput.get_df_train()
+    if acc_score_of_sample_data:  # print some predict values and show accuracy of sample data
+        messages_bow = CountVectorizer(analyzer=readfileinput.seperate_msg).fit_transform(df_train['messages'])
+        X_train, X_test, y_train, y_test = train_test_split(messages_bow, df_train['spam'], test_size=0.25, shuffle=True)
+        classifier = MultinomialNB()
+        classifier.fit(X_train, y_train)
+    ...
+  ```
+  *  Check randomly 15 emails by Bayes algorithm. Value `1` is `spam`, the other is `ham`
+  <a><img src="images/email15.jpg"></a>
+  * The next lines are information about `Confusion Matrix`
+  * The last lines are to predict your test input data.
+<br />
 
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
-
-Project Link: [https://github.com/github_username/repo](https://github.com/github_username/repo)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+<!-- Reference -->
+## Reference <a name="reference"></a>
+[Email Spam Detection Using Python & Machine Learning](https://medium.com/@randerson112358/email-spam-detection-using-python-machine-learning-abe38c889855)<br />
+[Lý thuyết về mạng Bayes và ứng dụng vào bài toán lọc thư rác](https://viblo.asia/p/ly-thuyet-ve-mang-bayes-va-ung-dung-vao-bai-toan-loc-thu-rac-07LKXzkelV4)<br />
+[Vietnamese Stopwords](https://github.com/stopwords/vietnamese-stopwords)<br />
