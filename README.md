@@ -4,15 +4,15 @@
  
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-* [About the Project](#about-the-project)
-* [Getting Started](#getting-started)
+1. [About the Project](#about-the-project)
+2. [Getting Started](#getting-started)
   * [Requirement](#requirement)
   * [Installation](#installation)
-* [Usage](#usage)
+3. [Usage](#usage)
   * [Training data](#training-data)
   * [Test data](#test-data)
   * [Statistic](#statistic)
-* [Reference](#reference)
+4. [Reference](#reference)
 <br />
 
 <!-- ABOUT THE PROJECT -->
