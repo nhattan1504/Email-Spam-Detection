@@ -76,9 +76,22 @@ python predict.py
 updateSampleFiles = False
 ```
 - The result will look like this:
-
+  <a>
+    <img src="images/result.png">
+  </a>
 
 ### Statistic
+- If you want to see details (precision, accuracy,...) about training model, set `show_acc_sample_data` attribute in file `predict.py` to `True`
+```sh
+show_acc_sample_data = False
+```
+- And the output looks like this: 
+  <a>
+    <img src="images/statistic.png">
+  </a>
+- - As the result, we see the amount of training data are `1155 mails` (include ham/spam mails.)
+
+
 
 <!-- CONTRIBUTING -->
 ## Contributing
